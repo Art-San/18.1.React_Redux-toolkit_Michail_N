@@ -10,9 +10,25 @@ function App() {
   const dispatch = useDispatch()
 
   const addTask = () => {
+    if(text.trim().length) {
     dispatch(addTodo({text}))
     setText('')
   }
+  }
+
+  // const addTodo = () => {
+  //   if(text.trim().length) {
+  //     setTodos([
+  //       ...todos,
+  //       {
+  //         id: new Date().toISOString(),
+  //         text,
+  //         completed: false
+  //       }
+  //     ])
+  //     setText('')
+  //   }
+  // }
 
   const removeTodo = (todoId) => {
     // setTodos(todos.filter(t => t.id !== todoId))
